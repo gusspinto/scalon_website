@@ -318,7 +318,7 @@ body {
 }
 
 .service-item {
-    background-color: rgba(114, 109, 109, 0.185);
+    background-color: rgba(114, 109, 109, 0.185); 
     padding: 25px; 
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
