@@ -517,7 +517,6 @@ body {
     background: linear-gradient(135deg, #1e1e1e, #3d3d3d);
     color: #ffffff;
     padding: 40px 0;
-    font-family: 'Helvetica Neue', sans-serif;
     box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -529,7 +528,6 @@ body {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -563,8 +561,9 @@ body {
 }
 
 .footer-links {
+    margin-left: 100px;
     margin-bottom: 20px;
-    text-align: left;
+    align-items: start;
 }
 
 .footer-links p {
@@ -578,7 +577,7 @@ body {
     display: block;
     color: #ffffff;
     margin: 5px 0;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
     font-size: 14px;
     position: relative;
@@ -609,6 +608,7 @@ body {
 }
 
 .copyright {
+    text-align: center;
     font-size: 14px;
     opacity: 0.8;
 }
