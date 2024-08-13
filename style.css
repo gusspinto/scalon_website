@@ -11,6 +11,21 @@ body {
     line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+
+    .button-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-content, .button-primary {
+        width: 100%; /* Make buttons take full width */
+        margin-bottom: 10px; /* Space between buttons */
+    }
+}
 /* Page section background */
 .first-part-page {
     background-color: var(--white);
@@ -113,21 +128,6 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 767px) {
-    .navbar-nav {
-        flex-direction: column;
-    }
-
-    .button-flex {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button-content, .button-primary {
-        width: 100%; /* Make buttons take full width */
-        margin-bottom: 10px; /* Space between buttons */
-    }
-}
 
 .logo {
     width: 80px;
@@ -302,54 +302,8 @@ body {
     display: block;
 }
 
-/* Medium devices (tablets) */
-@media (max-width: 992px) {
-    .line-below::after {
-        bottom: 5px;
-        height: 4px;
-    }
-    .quote {
-        margin-top: 80px;
-        font-size: 65px; /* Adjust based on your design */
-        font-weight: 600;
-        line-height: 1.2;
-        position: relative; /* Ensure correct positioning context for child elements */
-    }
-}
-
-@media (max-width: 769px) {
-    .line-below::after {
-        height: 4px;
-    }
-    .quote {
-        margin-top: 80px;
-        font-size: 65px; /* Adjust based on your design */
-        font-weight: 600;
-        line-height: 1.2;
-        position: relative; /* Ensure correct positioning context for child elements */
-    }
-    .button-flex{
-        margin-bottom: 70px;
-    }
-}
-
-/* Small devices (phones) */
-@media (max-width: 576px) {
-    .line-below::after {
-        bottom: 0px;
-        height: 4px;
-    }
-    .quote {
-        margin-top: 80px;
-        font-size: 40px; /* Adjust based on your design */
-        font-weight: 600;
-        line-height: 1.2;
-        position: relative; /* Ensure correct positioning context for child elements */
-    }
-}
-
 .services-section {
-    margin-top: 30pc;
+    margin-top: 20pc;
     padding: 80px 0;
 }
 
@@ -399,42 +353,7 @@ body {
 }
 
 
-@media (max-width: 991px) {
-    .section-title {
-        font-size: 40px; 
-    }
 
-    .service-title {
-        font-size: 20px; 
-    }
-
-    .service-description {
-        font-size: 14px; 
-    }
-
-    .service-icon {
-        width: 35px; 
-    }
-}
-
-
-@media (max-width: 576px) {
-    .section-title {
-        font-size: 32px; 
-    }
-
-    .service-title {
-        font-size: 18px;
-    }
-
-    .service-description {
-        font-size: 12px; 
-    }
-
-    .service-icon {
-        width: 30px; 
-    }
-}
 
 
 .about-us-section {
@@ -464,31 +383,72 @@ body {
     line-height: 1.6;
 }
 
-/* Ajustes para telas médias */
 @media (max-width: 991px) {
+    .line-below::after {
+        bottom: 5px;
+        height: 4px;
+    }
+    .quote {
+        margin-top: 80px;
+        font-size: 65px; /* Adjust based on your design */
+        font-weight: 600;
+        line-height: 1.2;
+        position: relative; /* Ensure correct positioning context for child elements */
+    }
+    .section-title {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    .service-title {
+        font-size: 20px;
+    }
+    .service-description {
+        font-size: 14px;
+    }
+    .service-icon {
+        width: 35px;
+    }
     .about-us-content {
         flex-direction: column;
         text-align: center;
     }
-
-    .section-title {
-        font-size: 40px;  /* Reduz o tamanho da fonte */
-        margin-bottom: 20px;
-    }
-
     .about-us-item {
-        font-size: 16px;  /* Reduz o tamanho da fonte */
+        font-size: 16px;
+    }
+    .button-flex {
+        margin-bottom: 70px;
     }
 }
 
-/* Ajustes para telas pequenas */
+@media (max-width: 769px) {
+    .line-below::after {
+        height: 4px;
+    }
+}
+
 @media (max-width: 576px) {
-    .section-title {
-        font-size: 32px;  /* Reduz ainda mais o tamanho da fonte */
+    .line-below::after {
+        bottom: 0px;
+        height: 4px;
     }
-
+    .quote {
+        font-size: 40px; /* Adjust based on your design */
+    }
+    .section-title {
+        font-size: 32px;  /* Reduce font size further */
+    }
+    .service-title {
+        font-size: 18px;
+    }
+    .service-description {
+        font-size: 12px;
+    }
+    .service-icon {
+        width: 30px;
+    }
     .about-us-item {
-        font-size: 14px;  /* Reduz ainda mais o tamanho da fonte */
+        font-size: 14px;  /* Reduce font size further */
     }
 }
+
 
