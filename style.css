@@ -350,6 +350,7 @@ body {
 
 .services-section {
     margin-top: 30pc;
+    padding: 80px 0;
 }
 
 .section-title {
@@ -367,12 +368,12 @@ body {
     padding: 25px;
     border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.7s ease, box-shadow 0.3s ease; /* sets the time of ease on mouse in and mouse out*/
+    transition: transform 0.7s ease, box-shadow 0.3s ease; /* sets the time of ease on mouse in and mouse out */
     height: 100%;
 }
 
 .service-item:hover {
-    transform: translateY(-10px); /* makes the services box go up -10px*/
+    transform: translateY(-10px); /* makes the services box go up -10px */
     box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -397,6 +398,45 @@ body {
     margin-bottom: 15px;
 }
 
+/* Ajustes para telas médias */
+@media (max-width: 991px) {
+    .section-title {
+        font-size: 40px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .service-title {
+        font-size: 20px; /* Reduz o tamanho da fonte do título de serviço */
+    }
+
+    .service-description {
+        font-size: 14px; /* Reduz o tamanho da fonte da descrição */
+    }
+
+    .service-icon {
+        width: 35px; /* Reduz o tamanho do ícone */
+    }
+}
+
+/* Ajustes para telas pequenas */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px; /* Reduz ainda mais o tamanho da fonte do título */
+    }
+
+    .service-title {
+        font-size: 18px; /* Reduz ainda mais o tamanho da fonte do título de serviço */
+    }
+
+    .service-description {
+        font-size: 12px; /* Reduz ainda mais o tamanho da fonte da descrição */
+    }
+
+    .service-icon {
+        width: 30px; /* Reduz ainda mais o tamanho do ícone */
+    }
+}
+
+
 .about-us-section {
     padding: 80px 0;
 }
@@ -407,11 +447,6 @@ body {
     gap: 40px;
 }
 
-.section-title {
-    font-size: 50px;
-    flex: 1;
-}
-
 .about-us-section {
     padding: 80px 0;
 }
@@ -420,11 +455,6 @@ body {
     display: flex;
     align-items: center;
     gap: 40px;
-}
-
-.section-title {
-    font-size: 50px;
-    flex: 1;
 }
 
 .about-us-item {
