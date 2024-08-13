@@ -446,6 +446,10 @@ body {
     .about-gusotos-logo {
         margin-right: 30px;
     }
+    .social-media {
+        margin-bottom: 20px;
+        margin-right: 40px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -474,7 +478,10 @@ body {
     .footer-logo img {
         max-width: 120px;
     }
-
+    .social-media {
+        margin-bottom: 20px;
+        margin-right: 40px;
+    }
     .social-icon {
         font-size: 20px;
         margin: 0 10px;
@@ -539,6 +546,7 @@ body {
 
 .social-media {
     margin-bottom: 20px;
+    margin-left: 50px;
 }
 
 .social-icon {
