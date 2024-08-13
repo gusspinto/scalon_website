@@ -412,6 +412,21 @@ body {
     flex: 1;
 }
 
+.about-us-section {
+    padding: 80px 0;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.section-title {
+    font-size: 50px;
+    flex: 1;
+}
+
 .about-us-item {
     flex: 2;
     font-size: 18px;
@@ -419,7 +434,7 @@ body {
     line-height: 1.6;
 }
 
-/* Responsive Layout */
+/* Ajustes para telas médias */
 @media (max-width: 991px) {
     .about-us-content {
         flex-direction: column;
@@ -427,6 +442,23 @@ body {
     }
 
     .section-title {
+        font-size: 40px;  /* Reduz o tamanho da fonte */
         margin-bottom: 20px;
     }
+
+    .about-us-item {
+        font-size: 16px;  /* Reduz o tamanho da fonte */
+    }
 }
+
+/* Ajustes para telas pequenas */
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px;  /* Reduz ainda mais o tamanho da fonte */
+    }
+
+    .about-us-item {
+        font-size: 14px;  /* Reduz ainda mais o tamanho da fonte */
+    }
+}
+
