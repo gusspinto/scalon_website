@@ -349,7 +349,7 @@ body {
 }
 
 .services-section {
-    padding: 120px 0;
+    margin-top: 30pc;
 }
 
 .section-title {
@@ -397,3 +397,36 @@ body {
     margin-bottom: 15px;
 }
 
+.about-us-section {
+    padding: 80px 0;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.section-title {
+    font-size: 50px;
+    flex: 1;
+}
+
+.about-us-item {
+    flex: 2;
+    font-size: 18px;
+    color: #a7afaffd;
+    line-height: 1.6;
+}
+
+/* Responsive Layout */
+@media (max-width: 991px) {
+    .about-us-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+}
