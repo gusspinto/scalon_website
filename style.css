@@ -414,6 +414,9 @@ body {
     .button-flex {
         margin-bottom: 70px;
     }
+    .about-gusotos-logo {
+        margin-right: 30px;
+    }
 }
 
 @media (max-width: 769px) {
@@ -439,6 +442,9 @@ body {
 
     .footer-center {
         text-align: center;
+    }
+    .about-gusotos-logo {
+        margin-right: 30px;
     }
 }
 
@@ -489,6 +495,9 @@ body {
 
     .footer-links a {
         font-size: 14px;
+    }
+    .about-gusotos-logo {
+        margin-right: 20px;
     }
 }
 
