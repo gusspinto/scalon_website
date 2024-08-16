@@ -10,6 +10,11 @@ body {
     font-size: 18px;
     line-height: 1.5;
 }
+::selection {
+    background: rgba(41, 40, 40, 0.637);
+    color: white;
+}
+
 
 @media screen and (max-width: 767px) {
     .navbar-nav {
@@ -304,7 +309,7 @@ body {
 
 .services-section {
     margin-top: 20pc;
-    margin-bottom: 30pc;
+    margin-bottom: 15pc;
 }
 
 .section-title {
@@ -847,7 +852,7 @@ body {
 
 .modal-content {
     color: #000;
-    background-color: rgba(255, 255, 255, 0.769);
+    background-color: rgba(255, 255, 255, 0.979);
     margin: 5% auto;
     padding: 30px;
     border: 1px solid #888;
@@ -858,6 +863,11 @@ body {
     overflow-y: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-text {
+    align-self: flex-end;
+    font-weight: 500;
 }
 
 .close-modal {
@@ -878,4 +888,11 @@ body {
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-10px); }
     to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+    .modal-text {
+        width: 62%;
+        text-align: left;
+    }
 }
