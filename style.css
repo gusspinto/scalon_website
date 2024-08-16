@@ -683,6 +683,8 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;
+    max-width: 1400px; /* Increased max-width for more space */
+    margin: 0 auto;
 }
 
 .project-item {
@@ -691,7 +693,8 @@ body {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.7s ease, box-shadow 0.7s ease;
-    max-width: 300px;
+    flex: 1 1 calc(50% - 60px); /* Each item takes up 50% of the row minus the gap */
+    max-width: 48%; /* Adjust the max-width to make items bigger */
     text-align: center;
 }
 
@@ -756,9 +759,21 @@ body {
 }
 
 .project-description {
-    font-size: 15px;
+    font-size: 18px;
     color: #666;
     padding: 0 15px 20px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 1024px) {
