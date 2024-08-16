@@ -428,6 +428,9 @@ body {
     .line-below::after {
         height: 4px;
     }
+    .action {
+        margin: 0px;
+    }
     .footer-content {
         flex-direction: column;
         text-align: center;
@@ -511,12 +514,6 @@ body {
     }
     .about-gusotos-logo {
         margin-right: 35px;
-    }
-}
-
-@media (max-width: 566px){
-    .quote {
-        margin-top: -30px;
     }
 }
 
