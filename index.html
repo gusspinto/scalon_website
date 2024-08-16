@@ -204,6 +204,20 @@
                 </div>
             </section>
         </div>
+          
+        <div class="contact-form-container">
+            <div class="contact-form-title">
+                <h2>Contact Us</h2>
+            </div>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="form-status"></p>
+        </div>
+
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
@@ -236,6 +250,14 @@
         </footer>
         
     </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("A9sFIunMmv3V6L51B"); // Replace with your actual public key
+        })();
+    </script>
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
