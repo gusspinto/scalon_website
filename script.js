@@ -47,13 +47,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
         emailjs.send("service_vzobj1a", "template_52butb6", {
             from_name: name,
             from_email: email,
-            subject: subject,
             message: message
         }, "A9sFIunMmv3V6L51B")
         .then(() => {
@@ -66,3 +64,4 @@ document.addEventListener('DOMContentLoaded', function () {
         
     });
 });
+
