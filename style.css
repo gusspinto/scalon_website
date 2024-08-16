@@ -648,7 +648,7 @@ body {
     content: '';
     display: block;
     height: 3px;
-    background: linear-gradient(90deg, #424242 5%, #0a0e14 95%);
+    background: linear-gradient(90deg, #3a3939c2 15%, #0a0e14 95%);
     margin: 20px auto;
     width: 100px;
 }
@@ -656,7 +656,7 @@ body {
 .projects-section {
     padding: 60px 0;
     padding-bottom: 140px;
-    background-image: linear-gradient(180deg,#0a0e14 1%, #424242 70%, #0a0e14 100%); /* Light background for contrast */
+    background-image: linear-gradient(180deg,#0a0e14 1%, #292626 70%, #0a0e14 100%); /* Light background for contrast */
 }
 
 .section-title {
@@ -900,114 +900,103 @@ body {
         text-align: left;
     }
 }
-.contact-form-container {
+.contact-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 20px;
+    justify-content: space-between;
+    padding: 40px;
+    max-width: 1400px; /* Increased the max-width to allow more space */
+    margin: 0 auto;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-.contact-form-title h2 {
-    font-size: 28px;
-    font-weight: 600;
-    color: #f1f1f1;
-    margin-bottom: 20px;
-}
-
-#contact-form {
-    background-color: #ffffff;
+.form-section {
+    flex: 3; /* Increased the flex value to occupy more space */
+    margin-right: 40px;
+    background: #2c2c2c;
     padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    max-width: 450px;
-    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.info-section {
+    flex: 1; /* Reduced the flex value to occupy less space */
+    background: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
 }
 
-#contact-form input,
-#contact-form textarea,
-#contact-form button {
-    width: 100%;
-    box-sizing: border-box;
+.form-row {
+    display: flex;
+    gap: 20px;
 }
 
-#contact-form input,
-#contact-form textarea {
-    padding: 14px;
+.form-group {
+    flex: 1;
     margin-bottom: 15px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 16px;
     background-color: #f9f9f9;
-    transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
-    outline: none;
-}
-
-#contact-form button {
-    padding: 14px;
-    background-color: #007bff;
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-#contact-form button:hover {
-    background-color: #0056b3;
-    box-shadow: 0 4px 15px rgba(0, 91, 179, 0.3);
-}
-
-#contact-form input::placeholder,
-#contact-form textarea::placeholder {
-    color: #aaa;
-}
-
-#contact-form textarea {
+textarea {
     resize: none;
     height: 120px;
 }
 
-@media (max-width: 768px) {
-    #contact-form {
-        padding: 25px;
-    }
-
-    .contact-form-title h2 {
-        font-size: 24px;
-    }
-}
-
-@media (max-width: 480px) {
-    #contact-form {
-        padding: 20px;
-    }
-
-    #contact-form input,
-    #contact-form textarea {
-        font-size: 14px;
-        padding: 12px;
-    }
-
-    #contact-form button {
-        padding: 12px;
-    }
-}
-#form-status {
-    text-align: center;
-    margin-top: 20px;
+button {
+    padding: 14px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
     font-size: 16px;
-    color: green;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.info-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.info-section ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.info-section p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .form-section {
+        margin-right: 0;
+        margin-bottom: 40px;
+    }
 }

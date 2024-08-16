@@ -40,28 +40,35 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the form from submitting in the traditional way
+        event.preventDefault(); // Prevent the default form submission
 
         const statusElement = document.getElementById('form-status');
         statusElement.textContent = 'Sending...';
 
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const company = document.getElementById('company').value;
+        const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
 
         emailjs.send("service_vzobj1a", "template_52butb6", {
             from_name: name,
             from_email: email,
+            phone: phone,
+            company: company,
+            subject: subject,
             message: message
         }, "A9sFIunMmv3V6L51B")
         .then(() => {
             statusElement.textContent = "Message sent successfully!";
-            document.getElementById('contact-form').reset(); // Reset the form
+            statusElement.style.color = "green"; // Optional: Change text color for success
+            document.getElementById('contact-form').reset(); // Reset the form after submission
         }, (error) => {
             statusElement.textContent = "Failed to send the message. Please try again.";
+            statusElement.style.color = "red"; // Optional: Change text color for failure
             console.error("Email sending error:", error);
         });
-        
     });
 });
 
