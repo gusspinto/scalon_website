@@ -514,6 +514,12 @@ body {
     }
 }
 
+@media (max-width: 566px){
+    .quote {
+        margin-top: -30px;
+    }
+}
+
 .logo-footer {
     display: block;
     margin-left: 20px;
