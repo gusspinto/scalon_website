@@ -420,7 +420,7 @@ body {
 }
 
 .footer-links {
-    margin-left: 100px;
+    margin-left: 90px;
     margin-bottom: 20px;
     align-items: start;
 }
@@ -662,7 +662,7 @@ body {
     }
 
     .footer-navigation-contact .footer-links {
-        margin: 20px 40px;
+        margin: 20px 20px;
     }
 
     .footer-navigation-contact .footer-links p {
