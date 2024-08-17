@@ -27,8 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
-
-    // Close the modal if the user clicks outside the modal content
     window.addEventListener("click", function(event) {
         const modals = document.querySelectorAll(".modal");
         modals.forEach(modal => {
