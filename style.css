@@ -574,7 +574,7 @@ body {
 
     .social-media {
         margin-bottom: 20px;
-        margin-right: 40px;
+        margin-right: 20px;
     }
 
     .footer-navigation-contact {
@@ -600,7 +600,7 @@ body {
 
 @media (max-width: 576px) {
     .footer-content {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
