@@ -432,22 +432,16 @@ body {
         margin-top: 40px;
     }
     .footer-content {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
     }
-
     .footer-links {
         margin-bottom: 15px;
     }
-    .footer-content {
-        flex-direction: row;
-        align-items: center;
-    }
-
     .footer-logo {
         margin-bottom: 20px;
     }
-
     .footer-center {
         text-align: center;
     }
@@ -461,61 +455,66 @@ body {
 }
 
 @media (max-width: 576px) {
+    .line-below::after {
+        bottom: 0px;
+        height: 4px;
+    }
+    .quote {
+        margin-top: -10px;
+        font-size: 40px; 
+    }
     .footer-content {
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-        text-align: left; /* Align text to the left */
+        align-items: center;
+        text-align: left;
     }
-
-    .footer-logo {
-        flex: 1 1 100%;
-        text-align: center;
-        margin-bottom: 20px;
+    .section-title {
+        font-size: 32px;  
     }
-
-    .footer-links, .footer-logo, .contact-links {
-        flex: 1;
+    .service-title {
+        font-size: 18px;
     }
-
-    .footer-links p, .contact-links p {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 10px;
+    .service-description {
+        font-size: 12px;
     }
-
-    .footer-links a, .contact-links a {
-        font-size: 14px;
-        color: #ffffff;
-        text-decoration: none;
-        margin-bottom: 5px;
-        transition: color 0.3s ease;
-        display: block;
+    .service-icon {
+        width: 30px;
     }
-
-    .footer-links a:hover, .contact-links a:hover {
-        color: #f97316;
+    .about-us-item {
+        font-size: 14px;  
     }
-
+    .footer-logo img {
+        max-width: 120px;
+    }
     .social-media {
-        text-align: center;
-        margin-top: 10px;
         margin-bottom: 20px;
+        margin-right: 40px;
+    }
+    .social-icon {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .footer-links a {
+        font-size: 14px;
+        margin: 0 10px;
+    }
+    .footer-logo img {
+        max-width: 120px;
     }
 
     .social-icon {
-        color: #ffffff;
+        font-size: 20px;
         margin: 0 10px;
-        font-size: 18px;
-        transition: color 0.3s ease;
     }
 
-    .social-icon:hover {
-        color: #f97316;
+    .footer-links a {
+        font-size: 14px;
+    }
+    .about-gusotos-logo {
+        margin-right: 35px;
     }
 }
-
 
 .logo-footer {
     display: block;
