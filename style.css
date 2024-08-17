@@ -686,7 +686,7 @@ body {
 .projects-section {
     padding: 60px 0;
     padding-bottom: 140px;
-    background-image: linear-gradient(180deg,#0a0e14 1%, #292626 70%, #0a0e14 100%); /* Light background for contrast */
+    background-image: linear-gradient(180deg,#0a0e14 10%, #1e1e1e 70%); /* Light background for contrast */
 }
 
 .section-title {
@@ -723,8 +723,8 @@ body {
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.7s ease, box-shadow 0.7s ease;
-    flex: 1 1 calc(50% - 60px); /* Each item takes up 50% of the row minus the gap */
-    max-width: 48%; /* Adjust the max-width to make items bigger */
+    flex: 1 1 calc(50% - 60px);
+    max-width: 48%;
     text-align: center;
 }
 
@@ -944,6 +944,16 @@ body {
         width: 62%;
         text-align: left;
     }
+    .contact-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        max-width: 1400px; /* Increased the max-width to allow more space */
+        margin: 0 auto;
+        background: #1e1e1e;
+        border-radius: 8px;
+        
+    }
 }
 .contact-container {
     display: flex;
@@ -952,8 +962,8 @@ body {
     max-width: 1400px; /* Increased the max-width to allow more space */
     margin: 0 auto;
     background: #1e1e1e;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.3);
 }
 
 .form-section {
@@ -1044,4 +1054,7 @@ button:hover {
         margin-right: 0;
         margin-bottom: 40px;
     }
+}
+.diff-background {
+    background-color: #1e1e1e;
 }
