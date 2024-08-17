@@ -34,8 +34,8 @@ body {
 /* Page section background */
 .first-part-page {
     background-color: var(--white);
-    background-image: linear-gradient(140deg, var(--second-hover), rgba(255, 255, 255, 0) 40%);
-    min-height: 95vh;
+    background-image: linear-gradient(150deg, var(--second-hover), rgba(255, 255, 255, 0) 40%);
+    min-height: 85vh;
     margin-bottom: 100px;
 }
 
@@ -1058,3 +1058,16 @@ button:hover {
 .diff-background {
     background-color: #1e1e1e;
 }
+.dt-space {
+    display: flex;
+    justify-content: space-between; /* Adjusts spacing between the items */
+    align-items: flex-start; /* Aligns items at the start of the flex container */
+}
+
+.service-item {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-right: 20px; /* Adds space between columns */
+}
+
