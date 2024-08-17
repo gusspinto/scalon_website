@@ -1060,14 +1060,34 @@ button:hover {
 }
 .dt-space {
     display: flex;
-    justify-content: space-between; /* Adjusts spacing between the items */
-    align-items: flex-start; /* Aligns items at the start of the flex container */
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
 }
 
-.service-item {
+.dt-item {
+    background-color: rgba(139, 133, 133, 0.185); 
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.7s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-right: 20px; /* Adds space between columns */
+    margin-right: 20px;
 }
+
+@media (max-width: 768px) {
+    .dt-space {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dt-item {
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+}
+
 
