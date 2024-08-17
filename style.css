@@ -493,14 +493,6 @@ body {
         height: 4px;
     }
 
-    .quote {
-        margin-top: 80px;
-        font-size: 65px;
-        font-weight: 600;
-        line-height: 1.2;
-        position: relative;
-    }
-
     .section-title {
         font-size: 40px;
         margin-bottom: 20px;
