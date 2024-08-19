@@ -13,6 +13,7 @@
     <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
 </head>
@@ -164,8 +165,8 @@
                 <div id="modal-hazmat" class="modal">
                     <div class="modal-content">
                         <span class="close-modal" data-target="#modal-hazmat">&times;</span>
-                        <h2><strong>about the project.</strong><p><i class="down-arrow" onclick="scrollToSection()"></i>
-                            See Website</p></h2>
+                        <h2>
+                            <strong>about the project.</strong></h2><p style="font-weight: 400;">See Website <i class="down-arrow" onclick="scrollToSection()"></i></p>
                         <div class="modal-text">
                             <p>Hazmat Barbershop is a modern barbershop located in Rio Tinto, Porto. For a variety of customers, the barbershop provides different grooming services such as traditional haircuts, shaves and styles that meet the requirements of each customer. <br><br>
                                 The primary goal of the project was to develop a website that reflects the barbershop’s unique blend of vintage charm and modern trends. The website was designed with a clean and user-friendly interface, ensuring easy navigation and a well-structured layout that adheres to usability principles. In addition to serving as an online presence for the barbershop, the website also functions as a portfolio showcasing the diverse range of services offered, allowing customers to explore and book appointments with ease.</p>
@@ -186,8 +187,10 @@
                             </div>
                             <img src="./img/hazmatproject.png" alt="Hazmat Project" class="web-img">
                             <div class="dt-website">
-                                <div class="web-link">
-                                    <dt><a href="https://barbeariahazmat.pt/">See Website</a></dt>
+                                <div class="web-link" id="web-address">
+                                    <a href="https://barbeariahazmat.pt/" role="button" target="_blank" class="left fas fa-external-link-alt" aria-hidden="true">
+                                        <i>See Website</i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
