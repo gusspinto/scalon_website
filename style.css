@@ -1089,5 +1089,75 @@ button:hover {
         margin-bottom: 20px; 
     }
 }
+.down-arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    cursor: pointer; /* Makes the arrow look clickable */
+}
+
+.web-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    text-decoration: none; 
+    color: inherit;
+    transition: color 0.8s ease;
+}
+
+.web-link dt {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    background-color: #000;
+    color: #b9b5b5; /* Changes the text color to black */
+    text-decoration: none;
+}
+
+.web-link a {
+    text-decoration: none;
+    color: inherit; /* Inherits the color, so no blue links */
+    transition: color 0.8s ease;
+}
+
+.web-link dt:hover {
+    border-radius: 5px;
+    border: 2px solid #b9b5b5;
+    background-color: #b9b5b5;
+    color: #000;
+}
+
+.web-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    max-width: 100%; 
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .web-img {
+        width: 100%;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+    .web-img {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1201px) {
+    .web-img {
+        width: 60%;
+    }
+}
 
 

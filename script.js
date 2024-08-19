@@ -70,3 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+function scrollToSection() {
+    document.getElementById("web-address").scrollIntoView({ behavior: 'smooth' });
+}
+
