@@ -698,7 +698,7 @@ body {
 
 .projects-section {
     padding: 60px 0;
-    background-color: #f9f9f9;
+    background-color: #f9f9f900;
 }
 
 .section-title {
@@ -718,7 +718,7 @@ body {
 }
 
 .project-item {
-    background-color: #ffffff;
+    background-color: #ffffffe8;
     border-radius: 25px;
     box-shadow: 0 15px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -790,6 +790,7 @@ body {
 
 .project-description {
     font-size: 18px;
+    font-weight: 700;
     color: #666;
     padding: 0 15px 20px;
 }
