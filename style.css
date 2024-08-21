@@ -1215,9 +1215,10 @@ button:hover {
 .testimonial-content {
     font-size: 18px;
     color: #555;
-    margin-bottom: 20px;
+    margin-top: 20px;
+
     line-height: 1.6; /* Improve readability */
-    text-align: justify;
+    text-align: center;
 }
 
 .testimonial-author {
