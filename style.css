@@ -1175,4 +1175,124 @@ button:hover {
     }
 }
 
+/* General Styles for Testimonials Section */
+.testimonials {
+    background-image: linear-gradient(180deg,#0a0e14 30%, #383d61 50%, #0a0e14 90%);
+    padding: 60px 0;
+    text-align: center;
+}
 
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.testimonial-slider {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.testimonial-slide {
+    max-width: 800px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffffde;
+    border-radius: 10px;
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+    flex-basis: calc(33.333% - 30px); /* Adjust width for a three-column layout */
+}
+
+/* Ensure testimonial content is centered and readable */
+.testimonial-content {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    line-height: 1.6; /* Improve readability */
+    text-align: justify;
+}
+
+.testimonial-author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.testimonial-author img {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial-author h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.testimonial-author p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .testimonial-slide {
+        flex-basis: calc(50% - 30px); /* Two-column layout for tablets */
+    }
+
+    .testimonial-content {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-slide {
+        flex-basis: calc(50% - 20px); /* Still two-column layout but with reduced margins */
+        margin: 10px;
+    }
+
+    .testimonial-content {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-slider {
+        flex-direction: column; /* Stack testimonials vertically */
+        align-items: center;
+    }
+
+    .testimonial-slide {
+        flex-basis: 100%; /* Single-column layout for small screens */
+        margin: 10px 0;
+    }
+
+    .testimonial-content {
+        font-size: 16px;
+        text-align: left; /* Align text to the left for better readability */
+    }
+
+    .testimonial-author h3 {
+        font-size: 18px;
+    }
+
+    .testimonial-author p {
+        font-size: 13px;
+    }
+}
