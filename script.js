@@ -74,28 +74,36 @@ function scrollToSection() {
     document.getElementById("web-address").scrollIntoView({ behavior: 'smooth' });
 }
 
-const slides = document.querySelectorAll('.testimonial-slide');
-let currentSlide = 0;
 
-function showSlide(index) {
-    slides.forEach((slide, i) => {
-        slide.style.transform = `translateX(${(i - index) * 100}%)`;
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('JavaScript Loaded');
+    // Your existing code
+    document.addEventListener('DOMContentLoaded', () => {
+        const slidesContainer = document.querySelector('.testimonial-slides-container');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const totalSlides = slides.length;
+        let currentIndex = 0;
+    
+        function updateSlidePosition() {
+            // Calculate the horizontal offset for the slides container
+            const offset = -currentIndex * 100; // Offset in percentage
+            slidesContainer.style.transform = `translateX(${offset}%)`;
+        }
+    
+        document.querySelector('.next-slide').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateSlidePosition();
+        });
+    
+        document.querySelector('.prev-slide').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateSlidePosition();
+        });
+    
+        // Initialize the slide position
+        updateSlidePosition();
     });
-}
+});
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    showSlide(currentSlide);
-}
-
-// Auto-slide every 5 seconds
-setInterval(nextSlide, 5000);
-
-// Initialize the slider
-showSlide(currentSlide);
 
