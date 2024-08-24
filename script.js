@@ -105,5 +105,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.querySelector('.loading-container');
+    setTimeout(() => {
+        loader.style.opacity = '0';
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500); // Matches the fade-out duration
+    }, 3000); // Loading time
+});
+
+
+
 
 
