@@ -115,6 +115,15 @@ document.addEventListener('DOMContentLoaded', function () {
     }, 3000); // Loading time
 });
 
+function toggleMoreServices() {
+    var moreServices = document.getElementById("more-services");
+    if (moreServices.style.display === "none" || moreServices.style.display === "") {
+        moreServices.style.display = "block";
+    } else {
+        moreServices.style.display = "none";
+    }
+}
+
 
 
 

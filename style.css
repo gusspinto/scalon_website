@@ -1435,4 +1435,194 @@ button:hover {
     }
 }
 
+.see-more-services-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5a5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.see-more-services-1:hover {
+    background-color: #e14c4f;
+}
+
+#more-services {
+    display: none; /* Initially hidden */
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+
+
+.s-section {
+    padding: 60px 20px;
+    background: #1a1a1a;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.s-title {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #FFD700;
+}
+
+/* Row Styling */
+.s-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Item Styling */
+.s-item {
+    flex: 1;
+    min-width: 280px;
+    background: #292929;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.s-item:hover {
+    background: #343434;
+    transform: translateY(-10px);
+}
+
+.s-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.s-title-item {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.s-description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-align: left;
+}
+
+/* List Styling */
+.s-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    color: #fff;
+}
+
+.s-list li {
+    margin-bottom: 10px;
+}
+
+/* Case Study Styling */
+.s-case-study {
+    margin-top: 60px;
+    padding: 30px;
+    background: #333333;
+    border-radius: 10px;
+}
+
+.s-case-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #FFD700;
+}
+
+.s-case-content {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #ddd;
+    text-align: left;
+}
+
+/* Testimonials Styling */
+.s-testimonials {
+    margin-top: 60px;
+    padding: 30px;
+    background: #404040;
+    border-radius: 10px;
+}
+
+.s-testimonial-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFD700;
+}
+
+.s-testimonial {
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+.s-testimonial cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #FFD700;
+}
+
+/* Call to Action (CTA) Styling */
+.s-cta {
+    margin-top: 60px;
+    padding: 30px;
+    background: #FFD700;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.s-cta-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+.s-cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #292929;
+    color: #FFD700;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.s-cta-button:hover {
+    background: #FFD700;
+    color: #000;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .s-row {
+        flex-direction: column;
+    }
+
+    .s-item {
+        margin-bottom: 20px;
+    }
+}
 
