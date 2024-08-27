@@ -117,12 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 function toggleMoreServices() {
     var moreServices = document.getElementById("more-services");
-    if (moreServices.style.display === "none" || moreServices.style.display === "") {
-        moreServices.style.display = "block";
+    if (moreServices.classList.contains("open")) {
+        moreServices.classList.remove("open");
+        moreServices.style.maxHeight = null;
     } else {
-        moreServices.style.display = "none";
+        moreServices.classList.add("open");
+        moreServices.style.maxHeight = moreServices.scrollHeight + "px";
     }
 }
+
 
 
 

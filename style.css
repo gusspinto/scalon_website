@@ -1452,11 +1452,34 @@ button:hover {
 }
 
 #more-services {
-    display: none; /* Initially hidden */
-    padding: 20px;
-    margin-top: 20px;
-    background-color: #f1f1f1;
-    border-radius: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+}
+
+#more-services.open {
+    max-height: 1000px; /* Default max-height for large screens */
+}
+
+/* Tablets (between 768px and 1024px) */
+@media (max-width: 1024px) {
+    #more-services.open {
+        max-height: 1000px; /* Adjusted max-height for tablets */
+    }
+}
+
+/* Small tablets and large smartphones (between 576px and 768px) */
+@media (max-width: 768px) {
+    #more-services.open {
+        max-height: 1000px; /* Adjusted max-height for small tablets and large smartphones */
+    }
+}
+
+/* Smartphones (max-width 576px) */
+@media (max-width: 576px) {
+    #more-services.open {
+        max-height: 1000px; /* Adjusted max-height for smartphones */
+    }
 }
 
 
