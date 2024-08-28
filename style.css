@@ -110,7 +110,7 @@ body {
 }
 
 .nav-link.active, .nav-link:hover {
-    color: #c7ced64f;
+    color: #111111;
 }
 
 .navbar-brand {
@@ -121,18 +121,15 @@ body {
 }
 
 .navbar-toggler {
-    background-color: rgb(90, 86, 86);
+    background: #3f3e3e;
     margin-left: 40px;
     border: none;
-    transition: background-image 5s;
 }
 
 .navbar-toggler:focus, .navbar-toggler:active {
-    background-color: var(--white);
-    background-image: linear-gradient(135deg, var(--second-hover), rgba(255, 255, 255, 0) 100%);
-    color: #fff;
+    background-color: #1c1c1c;
+    color: transparent;
 }
-
 
 .logo {
     width: 80px;
@@ -469,7 +466,7 @@ body {
 }
 
 .footer-links a:hover {
-    color: #ff6b6b;
+    color: #243ca7d5;
 }
 
 .footer-links a::before {
@@ -479,7 +476,7 @@ body {
     top: 20px;
     width: 0%;
     height: 2px;
-    background-color: #ff6b6b;
+    background-color: #243ca7d5;
     transition: width 0.3s ease;
 }
 
@@ -502,7 +499,7 @@ body {
 }
 
 .social-icon:hover {
-    color: #ff6b6b;
+    color: #243ca7d5;
     transform: scale(1.2);
 }
 .footer-navigation-contact {
@@ -1202,7 +1199,7 @@ button:hover {
 
 /* General Styles for Testimonials Section */
 .testimonials {
-    background-image: linear-gradient(180deg,#0a0e14 30%, #383d61 50%, #0a0e14 90%);
+    background-image: linear-gradient(180deg,#0a0e14 30%, #0c0f25 50%, #0a0e14 90%);
     padding: 60px 0;
     text-align: center;
 }
@@ -1436,19 +1433,22 @@ button:hover {
 }
 
 .see-more-services-1 {
+    font-weight: 800;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #ff5a5f;
-    color: white;
+    background-color: #282828;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     border-radius: 30px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
 }
 
 .see-more-services-1:hover {
-    background-color: #e14c4f;
+    transition: background-color 0.5s ease;
+    background-color: #1735bbd5;
+    color: #ffffff;
 }
 
 #more-services {
@@ -1485,7 +1485,7 @@ button:hover {
 
 .s-section {
     padding: 60px 20px;
-    background: #1a1a1a;
+    background: #202020;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -1495,7 +1495,7 @@ button:hover {
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
-    color: #FFD700;
+    color: #243ca7d5;
 }
 
 /* Row Styling */
@@ -1510,7 +1510,7 @@ button:hover {
 .s-item {
     flex: 1;
     min-width: 280px;
-    background: #292929;
+    background: #1a1818a6;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -1518,7 +1518,7 @@ button:hover {
 }
 
 .s-item:hover {
-    background: #343434;
+    background: #161616;
     transform: translateY(-10px);
 }
 
@@ -1532,7 +1532,7 @@ button:hover {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #FFD700;
+    color: #243ca7d5;
 }
 
 .s-description {
@@ -1558,7 +1558,7 @@ button:hover {
 .s-case-study {
     margin-top: 60px;
     padding: 30px;
-    background: #333333;
+    background: #1b1b1b;
     border-radius: 10px;
 }
 
@@ -1566,7 +1566,7 @@ button:hover {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #FFD700;
+    color: #243ca7d5;
 }
 
 .s-case-content {
@@ -1589,7 +1589,7 @@ button:hover {
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
-    color: #FFD700;
+    color: #243ca7d5;
 }
 
 .s-testimonial {
@@ -1602,14 +1602,14 @@ button:hover {
     display: block;
     margin-top: 10px;
     font-weight: 600;
-    color: #FFD700;
+    color: #243ca7d5;
 }
 
 /* Call to Action (CTA) Styling */
 .s-cta {
     margin-top: 60px;
     padding: 30px;
-    background: #FFD700;
+    background: #243ca7d5;
     border-radius: 10px;
     text-align: center;
 }
@@ -1625,7 +1625,7 @@ button:hover {
     display: inline-block;
     padding: 15px 30px;
     background: #292929;
-    color: #FFD700;
+    color: #243ca7d5;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 5px;
@@ -1634,7 +1634,7 @@ button:hover {
 }
 
 .s-cta-button:hover {
-    background: #FFD700;
+    background: #243ca7d5;
     color: #000;
 }
 
@@ -1647,5 +1647,47 @@ button:hover {
     .s-item {
         margin-bottom: 20px;
     }
+}
+
+/* Hide the dropdown by default */
+.nav-item .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #1e1e1e; /* Dark grey background */
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+/* Style dropdown items */
+.nav-item .dropdown-item {
+    color: #ffffff; /* White text color */
+    padding: 8px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: #333333; /* Slightly lighter grey on hover */
+    color: #f0f0f0; /* Off-white text color on hover */
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+/* Arrow styling */
+.dropdown-toggle .dropdown-arrow {
+    font-size: 12px;
+    margin-left: 5px;
+    color: #ffffff; /* White arrow */
+}
+
+/* Optional: Make sure the arrow rotates when dropdown is open */
+.nav-item:hover .dropdown-arrow {
+    transform: rotate(180deg);
 }
 

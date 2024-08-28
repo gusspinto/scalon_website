@@ -126,6 +126,19 @@ function toggleMoreServices() {
     }
 }
 
+document.getElementById('moreDropdown').addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent the default action of the link
+    var dropdownMenu = this.nextElementSibling;
+
+    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
+        if (dropdownMenu.style.display === "block") {
+            dropdownMenu.style.display = "none";
+        } else {
+            dropdownMenu.style.display = "block";
+        }
+    }
+});
+
 
 
 

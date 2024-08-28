@@ -51,11 +51,18 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#projects">Projects</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">About</a>
+                                
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="moreDropdown" role="button">
+                                        More <span class="dropdown-arrow"></span>
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="moreDropdown">
+                                        <li><a class="dropdown-item" href="#about-us">About Us</a></li>
+                                        <li><a class="dropdown-item" href="#testimonials">Testimonials</a></li>
+                                    </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="#contact-form">Contact</a>
                                 </li>
                                 <li class="button-main-content" style="margin-left: 20px;">
                                     <a class="button-main" href="https://www.fresha.com/pt/a/gusotos-baguim-do-monte-rua-das-flores-mtrun0uf/booking?pId=1208429">Get Started</a>
@@ -226,9 +233,9 @@
                                 </div>
                             
                                 <div class="s-case-study">
-                                    <h3 class="s-case-title">Case Study: E-commerce Website for ABC Store</h3>
+                                    <h3 class="s-case-title">Case Study: Website for Hazmat Barbershop</h3>
                                     <p class="s-case-content">
-                                        We developed a custom e-commerce website for ABC Store, which resulted in a 50% increase in online sales within the first three months. Our approach included:
+                                        We developed a custom website for Hazmat Barbershop, which resulted in a 50% increase in online sales within the first three months. Our approach included:
                                     </p>
                                     <ul class="s-list">
                                         <li>Custom website design with a focus on user experience</li>
@@ -255,21 +262,16 @@
                             
                                 <div class="s-cta">
                                     <h3 class="s-cta-title">Ready to Elevate Your Digital Presence?</h3>
-                                    <a href="contact.html" class="s-cta-button">Contact Us Today</a>
+                                    <a href="#contact-form" class="s-cta-button">Contact Us Today</a>
                                 </div>
                             </section>
-                            
                         </section>
                     </div>
-                            
-                    
                 </div>
-
-                    
             </section>
 
             <!--Client Testimonials-->
-            <section class="testimonials">
+            <section id="testimonials" class="testimonials">
                 <div class="container">
                     <h2 class="section-title">What Our Clients Say</h2>
                     <div class="testimonial-slider">
@@ -408,10 +410,10 @@
                     </div>
                 </section>
               
-            <div class="contact-container">
+            <div id="contact-form" class="contact-container">
                 <div class="form-section">
                     <h2>get in touch.</h2>
-                    <form id="contact-form">
+                    <form>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Name*</label>
@@ -447,7 +449,7 @@
                             <label for="message">Message*</label>
                             <textarea id="message" placeholder="Message" required></textarea>
                         </div>
-                        <button type="submit" style="font-weight: 700; font-family:'DM Sans', sans-serif;">Submeter</button>
+                        <button type="submit" style="font-weight: 700; font-family:'DM Sans', sans-serif;" class="contact-submit">Submeter</button>
                     </form>
                     <p id="form-status"></p>
                 </div>
