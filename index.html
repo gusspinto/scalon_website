@@ -42,17 +42,17 @@
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      padding: 2rem;
       text-align: center;
-      overflow: auto; /* Allows scroll when content overflows */
-      flex-direction: column;
+      overflow: auto; /* Allow scrolling */
+      padding: 2rem;
+      box-sizing: border-box;
     }
 
     .container {
       max-width: var(--max-width);
       width: 100%;
       animation: fadeIn 1.5s ease-in-out;
-      overflow: auto; /* Allows scroll when content overflows */
+      padding-bottom: 20px; /* Ensure some padding at the bottom */
     }
 
     .logo {
@@ -196,6 +196,37 @@
     .popup button:hover {
       background-color: #ffe066;
     }
+
+    /* Make sure content fits and scrolls on mobile */
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem; /* Less padding for smaller screens */
+      }
+
+      .container {
+        max-width: 90%; /* Make container width responsive */
+      }
+
+      h1 {
+        font-size: 2.5rem; /* Reduce font size for smaller screens */
+      }
+
+      p {
+        font-size: 1.1rem; /* Smaller text for mobile */
+      }
+
+      .subscribe input[type="email"] {
+        font-size: 0.9rem; /* Smaller input text */
+      }
+
+      .social-icons a {
+        font-size: 1.5rem; /* Smaller social icon size */
+      }
+
+      .language-switcher {
+        font-size: 1.5rem; /* Smaller font size for language switcher */
+      }
+    }
   </style>
 </head>
 <body>
@@ -271,7 +302,7 @@
         title.textContent = "Something amazing is coming.";
         description.innerHTML = 'The new <strong>Scalon</strong> website is almost ready.<br>Stay tuned — it\'s going to be worth it 🚀';
       } else {
-        title.textContent = "Algo incrível está a chegar.";
+        title.textContent = "Estamos a preparar algo incrível.";
         description.innerHTML = 'O novo website da <strong>Scalon</strong> está quase pronto.<br>Fica atento — vai valer a pena 🚀';
       }
     }
