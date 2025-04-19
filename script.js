@@ -1,146 +1,123 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all elements that can open a modal
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("JavaScript Loaded");
+
+    // MODALS
     const openModalButtons = document.querySelectorAll(".open-modal");
-
-    // Add click event listener to each button
-    openModalButtons.forEach(button => {
-        button.addEventListener("click", function(event) {
-            event.preventDefault();  // Prevent the default link behavior
-            const modalId = this.getAttribute("data-target");
-            const modal = document.querySelector(modalId);
-            if (modal) {
-                modal.style.display = "flex";  // Show the modal
-            }
-        });
-    });
-
-    // Get all elements that can close a modal
     const closeModalButtons = document.querySelectorAll(".close-modal");
 
-    // Add click event listener to each button
-    closeModalButtons.forEach(button => {
-        button.addEventListener("click", function() {
+    openModalButtons.forEach(button => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
             const modalId = this.getAttribute("data-target");
             const modal = document.querySelector(modalId);
-            if (modal) {
-                modal.style.display = "none";  // Hide the modal
-            }
+            if (modal) modal.style.display = "flex";
         });
     });
-    window.addEventListener("click", function(event) {
+
+    closeModalButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            const modalId = this.getAttribute("data-target");
+            const modal = document.querySelector(modalId);
+            if (modal) modal.style.display = "none";
+        });
+    });
+
+    window.addEventListener("click", function (event) {
         const modals = document.querySelectorAll(".modal");
         modals.forEach(modal => {
-            if (event.target === modal) {
-                modal.style.display = "none";  // Hide the modal
-            }
+            if (event.target === modal) modal.style.display = "none";
         });
     });
-});
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent the default form submission
 
-        const statusElement = document.getElementById('form-status');
-        statusElement.textContent = 'Sending...';
+    // SCROLL TO SECTION
+    const scrollToSection = () => {
+        const section = document.getElementById("web-address");
+        if (section) section.scrollIntoView({ behavior: "smooth" });
+    };
+    window.scrollToSection = scrollToSection;
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const phone = document.getElementById('phone').value;
-        const company = document.getElementById('company').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
-
-        emailjs.send("service_vzobj1a", "template_52butb6", {
-            from_name: name,
-            from_email: email,
-            phone: phone,
-            company: company,
-            subject: subject,
-            message: message
-        }, "A9sFIunMmv3V6L51B")
-        .then(() => {
-            statusElement.textContent = "Message sent successfully!";
-            statusElement.style.color = "green"; // Optional: Change text color for success
-            document.getElementById('contact-form').reset(); // Reset the form after submission
-        }, (error) => {
-            statusElement.textContent = "Failed to send the message. Please try again.";
-            statusElement.style.color = "red"; // Optional: Change text color for failure
-            console.error("Email sending error:", error);
-        });
-    });
-});
-
-function scrollToSection() {
-    document.getElementById("web-address").scrollIntoView({ behavior: 'smooth' });
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('JavaScript Loaded');
-    // Your existing code
-    document.addEventListener('DOMContentLoaded', () => {
-        const slidesContainer = document.querySelector('.testimonial-slides-container');
+    // SLIDER / TESTIMONIALS
+    document.addEventListener("DOMContentLoaded", function () {
+        const slidesContainer = document.querySelector('.testimonial-slider');
         const slides = document.querySelectorAll('.testimonial-slide');
         const totalSlides = slides.length;
         let currentIndex = 0;
-    
+      
         function updateSlidePosition() {
-            // Calculate the horizontal offset for the slides container
-            const offset = -currentIndex * 100; // Offset in percentage
-            slidesContainer.style.transform = `translateX(${offset}%)`;
+          // Calculate the horizontal offset for the slides container
+          const offset = -currentIndex * 100; // Offset in percentage
+          slidesContainer.style.transform = `translateX(${offset}%)`;
         }
-    
+      
         document.querySelector('.next-slide').addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % totalSlides;
-            updateSlidePosition();
+          currentIndex = (currentIndex + 1) % totalSlides;
+          updateSlidePosition();
         });
-    
+      
         document.querySelector('.prev-slide').addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-            updateSlidePosition();
+          currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+          updateSlidePosition();
         });
-    
+      
         // Initialize the slide position
         updateSlidePosition();
-    });
-});
+      });
+      
 
-document.addEventListener('DOMContentLoaded', function () {
-    const loader = document.querySelector('.loading-container');
-    setTimeout(() => {
-        loader.style.opacity = '0';
+    // LOADER
+    const loader = document.querySelector(".loading-container");
+    if (loader) {
         setTimeout(() => {
-            loader.style.display = 'none';
-        }, 500); // Matches the fade-out duration
-    }, 3000); // Loading time
-});
-
-function toggleMoreServices() {
-    var moreServices = document.getElementById("more-services");
-    if (moreServices.classList.contains("open")) {
-        moreServices.classList.remove("open");
-        moreServices.style.maxHeight = null;
-    } else {
-        moreServices.classList.add("open");
-        moreServices.style.maxHeight = moreServices.scrollHeight + "px";
+            loader.style.opacity = "0";
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 500);
+        }, 3000);
     }
-}
 
-document.getElementById('moreDropdown').addEventListener('click', function(event) {
-    event.preventDefault(); // Prevent the default action of the link
-    var dropdownMenu = this.nextElementSibling;
-
-    if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-        if (dropdownMenu.style.display === "block") {
-            dropdownMenu.style.display = "none";
-        } else {
-            dropdownMenu.style.display = "block";
+    // TOGGLE MORE SERVICES
+    const toggleMoreServices = () => {
+        const moreServices = document.getElementById("more-services");
+        if (moreServices) {
+            if (moreServices.classList.contains("open")) {
+                moreServices.classList.remove("open");
+                moreServices.style.maxHeight = null;
+            } else {
+                moreServices.classList.add("open");
+                moreServices.style.maxHeight = moreServices.scrollHeight + "px";
+            }
         }
+    };
+    window.toggleMoreServices = toggleMoreServices;
+
+    // DROPDOWN
+    const moreDropdown = document.getElementById("moreDropdown");
+    if (moreDropdown) {
+        moreDropdown.addEventListener("click", function (event) {
+            event.preventDefault();
+            const dropdownMenu = this.nextElementSibling;
+            if (dropdownMenu && dropdownMenu.classList.contains("dropdown-menu")) {
+                dropdownMenu.style.display = dropdownMenu.style.display === "block" ? "none" : "block";
+            }
+        });
     }
 });
-
-
-
-
-
-
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('.fade-in-section');
+  
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Optional: If you want it to only animate once
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+  
+    sections.forEach(section => {
+      observer.observe(section);
+    });
+  });
+  
