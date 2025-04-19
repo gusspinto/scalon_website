@@ -701,7 +701,7 @@ body {
 @media (max-width: 769px) {
     .line-below::after {
         height: 4px;
-    }
+    } 
 
     .action {
         margin-top: 40px;
