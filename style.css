@@ -19,15 +19,15 @@ body {
 /* Page section background */
 .first-part-page {
     background-color: var(--white);
-    background-image: linear-gradient(150deg, var(--second-hover), #162822ad 40%);
+    background-image: linear-gradient(160deg, var(--second-hover), #151515 40%);
     min-height: 85vh;
     margin-bottom: 100px;
 }
 
 :root {
-    --white: #162822;
+    --white: #151515;
     --first-hover: #212224;
-    --second-hover: #4c4848;
+    --second-hover: hwb(0 17% 82%);
     --third-hover: #796e6e;
     --neutral--black-800: #000000;
     --start-now-color: #23286b;
@@ -55,7 +55,7 @@ body {
   
   /* Logo adjustments */
   .logo {
-    max-height: 100px;    /* Ajusta a altura máxima do logo */
+    max-height: 130px;    /* Ajusta a altura máxima do logo */
     width: auto;         /* Mantém a proporção original */
     height: auto;
     object-fit: contain; /* Garante que o logo não distorça */
@@ -152,7 +152,7 @@ body {
   
   /* Custom Primary Button */
   .btn-custom-primary {
-    background-color: #7ee0f9;
+
     color: #0f172a;
     border: none;
     padding: 10px 24px;
@@ -162,10 +162,20 @@ body {
   }
   
   .btn-custom-primary:hover {
-    background-color: #5cd0ea;
+
     transform: translateY(-2px);
     color: #0f172a;
   }
+
+  .btn-custom-primary {
+  background-color: #0a3d62;
+  color: #fff;
+  border: none;
+}
+
+.btn-custom-primary:hover {
+  background-color: #062c47;
+}
   
   /* Responsive Design */
   @media (max-width: 992px) {
@@ -184,7 +194,7 @@ body {
     }
   
     .logo {
-      max-height: 75px;  /* Ajuste do logo em telas menores */
+      max-height: 105px;  /* Ajuste do logo em telas menores */
     }
   
     /* Responsividade para os links da navbar */
@@ -205,7 +215,7 @@ body {
     }
   
     .logo {
-      max-height: 75px;  /* Ajuste ainda maior para logo em telas muito pequenas */
+      max-height: 115px;  /* Ajuste ainda maior para logo em telas muito pequenas */
     }
   
     .nav-button a {
@@ -216,7 +226,7 @@ body {
   
   @media (max-width: 576px) {
     .logo {
-      max-height: 65px;  /* Ajuste do logo para telas pequenas */
+      max-height: 95px;  /* Ajuste do logo para telas pequenas */
     }
   
     .nav-link {
@@ -476,11 +486,14 @@ body {
 }
 
 .about-us-section {
-  background-color: #0f1d1a; /* close match to testimonial bg */
+  background-color: #151515; /* close match to testimonial bg */
   padding: 80px 20px;
   color: #e5e7eb;
   text-align: center;
 }
+
+
+
 
 .section-header {
   display: flex;
@@ -494,7 +507,7 @@ body {
   margin-bottom: 10px;
   color: #ffffff;
   font-weight: 600;
-  border-bottom: 2px solid #7ee0f9;
+  border-bottom: 2px solid #ffffff;
   display: inline-block;
   padding-bottom: 8px;
 }
@@ -505,15 +518,30 @@ body {
 }
 
 .about-us-text {
+  background-color: rgba(19, 24, 29, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 2rem;
   font-size: 1.1rem;
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto;
-  color: #d1d5db;
+  color: #d1d5dbcc;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
 
+.about-us-text:hover {
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  transform: translateY(-2px);
+}
+
+
+
 .highlight {
-  color: #7ee0f9;
+  color: #0a3d62;
   font-weight: 600;
 }
 
@@ -1291,8 +1319,7 @@ nav + .hero-section {
     }
   }
   
-  .hero-section .btn-custom-primary {
-    background-color: #7ee0f9;
+  .hero-section {
     color: #0f172a;
     border: none;
     padding: 10px 25px;
@@ -1300,7 +1327,6 @@ nav + .hero-section {
   }
   
   .hero-section .btn-custom-primary:hover {
-    background-color: #5cd0ea;
     transform: translateY(-2px);
     color: #0f172a;
   }
@@ -1426,7 +1452,7 @@ nav + .hero-section {
 }
 /* General Styles for Testimonials Section */
 .testimonials-section {
-    background-color: #162822ad;
+    background-color: #151515;
     padding: 80px 20px;
     color: #e5e7eb;
     text-align: center;
@@ -1438,7 +1464,7 @@ nav + .hero-section {
     margin-bottom: 50px;
     color: #ffffff;
     font-weight: 600;
-    border-bottom: 2px solid #7ee0f9;
+    border-bottom: 2px solid #ffffff;
     display: inline-block;
     padding-bottom: 8px;
   }
@@ -1524,7 +1550,7 @@ nav + .hero-section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #162822;
+    background-color: #12181f;
     z-index: 99;
     opacity: 1;
     transition: opacity 0.5s ease-in-out;
@@ -1539,7 +1565,7 @@ nav + .hero-section {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 200px;
+    max-width: 220px;
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -1585,7 +1611,7 @@ nav + .hero-section {
 
 @media (max-width: 768px) {
     .loading-logo {
-        max-width: 150px;
+        max-width: 270px;
     }
     .loading-spinner {
         width: 40px;
@@ -1595,7 +1621,7 @@ nav + .hero-section {
 
 @media (max-width: 480px) {
     .loading-logo {
-        max-width: 120px;
+        max-width: 180px;
     }
     .loading-spinner {
         width: 30px;
@@ -1607,8 +1633,8 @@ nav + .hero-section {
     font-weight: 600;
     display: inline-block;
     padding: 10px 20px;
-    background-color: #1b3034; /* cor principal */
-    color: #7ee0f9;
+    background-color: #1a1f23; /* cor principal */
+    color: #384757ec;
     text-decoration: none;
     border-radius: 30px;
     cursor: pointer;
@@ -1657,9 +1683,10 @@ nav + .hero-section {
 
 .s-section {
     padding: 60px 20px;
-    background: #1b3034;
+    background: #111416; /* darker, cleaner background */
     max-width: 1200px;
     margin: 0 auto;
+    border-radius: 16px;
 }
 
 .s-title {
@@ -1667,7 +1694,7 @@ nav + .hero-section {
     font-weight: 700;
     text-align: center;
     margin-bottom: 40px;
-    color: #facc15;
+    color: #f9fafb; /* bright white for contrast */
 }
 
 /* Row Styling */
@@ -1682,18 +1709,21 @@ nav + .hero-section {
 .s-item {
     flex: 1;
     min-width: 280px;
-    background: #16282b;
-    padding: 20px;
-    border-radius: 10px;
+    background: #1a1f23; /* deep slate tone */
+    padding: 24px;
+    border-radius: 14px;
     text-align: center;
-    transition: transform 0.3s ease, background 0.3s ease;
-    border: 1px solid #264447;
+    color: #d1d5db; /* soft gray for readability */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .s-item:hover {
-    background: #122125;
-    transform: translateY(-10px);
+    background: #22292f; /* subtle hover change */
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
 }
+
 
 .s-icon {
     width: 60px;
@@ -1705,7 +1735,7 @@ nav + .hero-section {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 15px;
-    color: #facc15;
+    color: #36435e;
 }
 
 .s-description {
@@ -1730,24 +1760,34 @@ nav + .hero-section {
 /* Case Study Styling */
 .s-case-study {
     margin-top: 60px;
-    padding: 30px;
-    background: #173134;
-    border-radius: 10px;
+    padding: 40px;
+    background: #12181f; /* deeper dark for a sleek look */
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05); /* soft edge separation */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.s-case-study:hover {
+    background: #1a2028; /* subtle hover effect */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
 .s-case-title {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 20px;
-    color: #facc15;
+    color: #36435e;
+    text-align: left;
 }
 
 .s-case-content {
-    font-size: 16px;
-    margin-bottom: 20px;
-    color: #e3e3e3;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d1d5db;
     text-align: left;
 }
+
 
 /* Testimonials Styling */
 .s-testimonials {
@@ -1762,7 +1802,7 @@ nav + .hero-section {
     font-weight: 700;
     margin-bottom: 20px;
     text-align: center;
-    color: #facc15;
+    color: #36435e;
 }
 
 .s-testimonial {
@@ -1775,14 +1815,14 @@ nav + .hero-section {
     display: block;
     margin-top: 10px;
     font-weight: 600;
-    color: #facc15;
+    color: #36435e;
 }
 
 /* Call to Action (CTA) Styling */
 .s-cta {
     margin: 70px auto 0; /* auto centers it horizontally */
     padding: 30px;
-    background: #facc15;
+    background: #36435e;
     border-radius: 10px;
     text-align: center;
     max-width: 600px; /* optional: limit width to look nicer */
@@ -1801,7 +1841,7 @@ nav + .hero-section {
     display: inline-block;
     padding: 15px 30px;
     background: #1b3034;
-    color: #facc15;
+    color: #36435e;
     font-weight: 600;
     text-transform: uppercase;
     border-radius: 5px;
